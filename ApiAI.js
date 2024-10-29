@@ -1,3 +1,5 @@
+const apiKey = 'YOUR_API_KEY_HERE';
+
 async function generateWord(prefix) {
     const url = 'https://api.openai.com/v1/chat/completions';
     const prompt = `Give me a single word that starts with the prefix "${prefix}", If it is not found, answer me with -1.`;
