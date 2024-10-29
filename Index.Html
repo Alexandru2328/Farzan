@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="ApiAI.js"></script>
+    <script src="StartGame.js"></script>
+    <script src="EngineGame.js"></script>
+    <script src="Model.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container container-center" id="containerGame">
+        <!-- Show word -->
+        <div class="row justify-content-center mb-5" id="ShowWord">
+            <div class="col-sm-8 d-flex justify-content-center">
+                <div class="card text-white bg-primary mb-3" style="width: 30rem;">
+                    <div id="titleTurn" class="card-header">AI Turn</div>
+                    <div class="card-body">
+                        <h5 class="card-title">The word is</h5>
+                        <h2 class="card-text" id="word">...</h2>
+                    </div>
+                    <div class="card-header">
+                        <button type="button" onclick="addLetter(1)" class="btn btn-danger">Give Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player -->
+        <div class="row justify-content-center">
+            <div class="col-sm-6 d-flex justify-content-center">
+                <div class="card text-white bg-success mb-3" style="width: 38rem;" id="playerCard">
+                    <div class="card-header">Player</div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <button onclick="playerTurn()" class="btn btn-primary" type="button">Button</button>
+                            </div>
+                            <input id="playerInput" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                          </div>
+                    </div>
+                    <div class="card-header" id="rogresBarPlayer" >
+                        <H2 id="playerLife" >_ _ _ _ _</H2>
+                    </div>
+                </div>
+            </div>
+            <!-- AI -->
+            <div class="col-sm-6 d-flex justify-content-center" >
+                <div class="card text-white bg-success mb-3" style="width: 38rem;" id="aiCard">
+                    <div class="card-header">AI</div>
+                    <div class="card-body">
+                        <div class="spinner-grow text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </div>
+                    <div class="card-header">
+                         <H2 id="aiLife">_ _ _ _ _</H2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container-center" id="startGameDiv" >
+        <div class="card border-primary mb-3" style="width: 40rem;">
+            <div class="card-header" id="textNweRound">Start Game</div>
+            <div class="card-body text-primary">
+                <div class="input-group mb-3">
+                    <input id="inputStart" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="card-header">
+                <button id="butonStart" class="btn btn-primary" type="button" onclick="startGame()">Button</button>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

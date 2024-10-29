@@ -1,0 +1,79 @@
+
+body {
+    text-align: center;
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+#myDiv {  
+    background: linear-gradient(90deg, #1c0774, #be7abe);
+
+    border-bottom: 2px solid black;
+    width: 56%;
+    height: 400px;
+    margin-left: 23%;
+}
+#detalis {
+    height: 10%;
+    width: 25%;
+    margin-left: 75%;
+    margin-top: -5.4%;
+    font-size: 130%;
+}
+#timeDiv {
+    font-size: 130%;
+    height: 10%;
+    width: 25%;   
+}
+#divText {
+    height: 50%;
+    width: 100%; 
+    text-align: center;
+    font-size: 130%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    word-break: break-all;
+}
+
+#uzerText {
+    height: 40%;
+    width: 100%;
+    text-align: center;  
+    word-break: break-all;
+}
+
+.green {
+    color: rgb(52, 208, 52);
+}
+
+.container-center {
+    height: 100vh; /* Înălțime completă a ferestrei */
+    display: flex;
+    flex-direction: column; /* Organizăm conținutul pe verticală */
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+   
+}
+
+.purple {
+    color: rgb(227, 95, 13);
+}
+
+.titlePlayer {
+color: greenyellow;
+border: solid;
+
+}
+
+#containerGame{
+    display: none;
+}
