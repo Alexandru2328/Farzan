@@ -12,7 +12,8 @@ async function aiTurn(prefix) {
     var word = await generateWord(prefix);
     if (word === "-1") {
         addLetter(2);
-    } if (word.slice(0, 2) !== prefixGame) {
+    } 
+    if (word.slice(0, 2) !== prefixGame) {
         word = await generateWord(prefix);
     }
 
