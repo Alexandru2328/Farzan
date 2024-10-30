@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY_HERE';
+const apiKey = '';
 
 async function generateWord(prefix) {
     const url = 'https://api.openai.com/v1/chat/completions';
