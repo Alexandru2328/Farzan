@@ -9,11 +9,11 @@ function showWord(word) {
 
 async function aiTurn(prefix) {
     await delay(1500);
+
     var word = await generateWord(prefix);
     if (word === "-1") {
         addLetter(2);
-    } 
-    if (word.slice(0, 2) !== prefixGame) {
+    } if (word.slice(0, 2) !== prefixGame) {
         word = await generateWord(prefix);
     }
 
@@ -51,7 +51,7 @@ function addLetter(id){
 async function playerTurn() {
     var inputValue = document.getElementById("playerInput").value;
     if (inputValue.trim() === "") {
-        alert("You must enter a word to start the game");
+        alert("You must enter a word");
         return; 
     }
 
@@ -69,8 +69,8 @@ async function playerTurn() {
         alert("Input cannot contain spaces.");
         return;
     }
-    if (inputValue.slice(0, 2) !== prefixGame) {
-        alert("The word should start with " + prefixGame);
+    if (inputValue.slice(0, 2) !== prefixGame) { 
+        alert("The word should start with ' " + prefixGame + " '");
         return;
     }
 

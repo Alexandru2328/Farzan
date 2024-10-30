@@ -1,41 +1,44 @@
 async function startGame() {
-    var aiCard = document.getElementById("aiCard");
-    aiCard.style.display = "flex";
-    var startGameDiv = document.getElementById("startGameDiv");
     var inputValue = document.getElementById("inputStart").value;
-
+    
     if (inputValue.trim() === "") {
         alert("You must enter a word to start the game");
         return; 
     }
-
+    
     if (await checkWord(inputValue) === "False") {
         alert("You must enter a real word to start the game");
         return; 
     }
-
+    
     if (inputValue.length <= 2) {
         alert("You must enter a word longer than 2 letters");
         return; 
     }
-
+    
     if (inputValue.includes(" ")) {
         alert("Input cannot contain spaces.");
         return;
     }
+    
+    var aiCard = document.getElementById("aiCard");
+    aiCard.style.display = "flex";
 
+    var startGameDiv = document.getElementById("startGameDiv");
     startGameDiv.style.display = "none";
+
     var containerGame = document.getElementById("containerGame");
     containerGame.style.display = "flex";
+
     var playerCard = document.getElementById("playerCard");
     playerCard.style.display = "none";
+    
     var showWord = document.getElementById("word");
     showWord.innerText = inputValue;
 
     prefixGame = getSufix(inputValue);
     aiTurn(prefixGame);
 }
-
 
 function getSufix(word) {
     let prefix = word.substring(word.length -2);
